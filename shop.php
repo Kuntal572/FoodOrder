@@ -1,5 +1,6 @@
 <?php
-include ("header.php");
+// include ("header.php");
+include("top.php");
 $cat_dish='';
 $cat_dish_arr=array();
 $type='';

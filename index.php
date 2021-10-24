@@ -48,41 +48,10 @@ include('top.php');
 <!-- category section starts  -->
 <?php 
 function getCategory($id){
-
+    echo $id;
 }
 ?>
 <section class="category">
-
-
-    <a href="#" class="box">
-        <img src="image/cat-1.png" alt="">
-        <h3>combo</h3>
-    </a>
-               
-    <a href="#" class="box">
-        <img src="image/cat-2.png" alt="">
-        <h3>pizza</h3>
-    </a>
-
-    <a href="#" class="box">
-        <img src="image/cat-3.png" alt="">
-        <h3>burger</h3>
-    </a>
-
-    <a href="#" class="box">
-        <img src="image/cat-4.png" alt="">
-        <h3>chicken</h3>
-    </a>
-
-    <a href="#" class="box">
-        <img src="image/cat-5.png" alt="">
-        <h3>dinner</h3>
-    </a>
-
-    <a href="#" class="box">
-        <img src="image/cat-6.png" alt="">
-        <h3>coffee</h3>
-    </a>
     <?php 
     global $con;
 	$sql="SELECT id,category,category_image FROM category where status=1 ORDER BY order_number";
@@ -95,9 +64,6 @@ function getCategory($id){
         <h3><?php echo $row['category']?></h3>
         </a> 
 	<?php } ?>
-              
-
-
 </section>
 
 <!-- category section ends -->
@@ -287,14 +253,5 @@ function getCategory($id){
 <?php 
 include('footer.php');
 ?>
-<script>
-    function categor() {
-        $(".categor").click(function () {
 
-        });
-    }
-    $(document).ready(function () {
-
-    });
-</script>
     
