@@ -78,13 +78,20 @@ function getCategory($id){
 
 <div class="box-container">
 
-    <div class="box">
+<?php 
+    global $con;
+	$sql="SELECT dish.id,dish.category_id,dish.dish,dish.image,dish.type,dish_details.attribute,dish_details.price FROM dish,dish_details where dish.id=dish_details.dish_id AND dish.status=1 and dish_details.status=1 ORDER BY dish.added_on DESC LIMIT 8";
+	$res=mysqli_query($con,$sql);
+	
+	while($row=mysqli_fetch_assoc($res)){
+		?>
+             <div class="box">
         <a href="#" class="fas fa-heart"></a>
         <div class="image">
-            <img src="image/food-1.png" alt="">
+            <img src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($row['image']); ?>" alt="Dish Image">
         </div>
         <div class="content">
-            <h3>delicious food</h3>
+            <h3><?php echo $row['dish']?><?php echo '('.$row['attribute'].')'?></h3>
             <div class="stars">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
@@ -93,151 +100,11 @@ function getCategory($id){
                 <i class="fas fa-star-half-alt"></i>
                 <span> (50) </span>
             </div>
-            <div class="price">$40.00 <span>$50.00</span></div>
+            <div class="price">₹<?php echo $row['price']?>.00<span>₹500.00</span></div>
             <a href="#" class="btn">add to cart</a>
         </div>
     </div>
-
-    <div class="box">
-        <a href="#" class="fas fa-heart"></a>
-        <div class="image">
-            <img src="image/food-2.png" alt="">
-        </div>
-        <div class="content">
-            <h3>delicious food</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-                <span> (50) </span>
-            </div>
-            <div class="price">$40.00 <span>$50.00</span></div>
-            <a href="#" class="btn">add to cart</a>
-        </div>
-    </div>
-
-    <div class="box">
-        <a href="#" class="fas fa-heart"></a>
-        <div class="image">
-            <img src="image/food-3.png" alt="">
-        </div>
-        <div class="content">
-            <h3>delicious food</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-                <span> (50) </span>
-            </div>
-            <div class="price">$40.00 <span>$50.00</span></div>
-            <a href="#" class="btn">add to cart</a>
-        </div>
-    </div>
-
-    <div class="box">
-        <a href="#" class="fas fa-heart"></a>
-        <div class="image">
-            <img src="image/food-4.png" alt="">
-        </div>
-        <div class="content">
-            <h3>delicious food</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-                <span> (50) </span>
-            </div>
-            <div class="price">$40.00 <span>$50.00</span></div>
-            <a href="#" class="btn">add to cart</a>
-        </div>
-    </div>
-
-    <div class="box">
-        <a href="#" class="fas fa-heart"></a>
-        <div class="image">
-            <img src="image/food-5.png" alt="">
-        </div>
-        <div class="content">
-            <h3>delicious food</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-                <span> (50) </span>
-            </div>
-            <div class="price">$40.00 <span>$50.00</span></div>
-            <a href="#" class="btn">add to cart</a>
-        </div>
-    </div>
-
-    <div class="box">
-        <a href="#" class="fas fa-heart"></a>
-        <div class="image">
-            <img src="image/food-6.png" alt="">
-        </div>
-        <div class="content">
-            <h3>delicious food</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-                <span> (50) </span>
-            </div>
-            <div class="price">$40.00 <span>$50.00</span></div>
-            <a href="#" class="btn">add to cart</a>
-        </div>
-    </div>
-
-    <div class="box">
-        <a href="#" class="fas fa-heart"></a>
-        <div class="image">
-            <img src="image/food-7.png" alt="">
-        </div>
-        <div class="content">
-            <h3>delicious food</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-                <span> (50) </span>
-            </div>
-            <div class="price">$40.00 <span>$50.00</span></div>
-            <a href="#" class="btn">add to cart</a>
-        </div>
-    </div>
-
-    <div class="box">
-        <a href="#" class="fas fa-heart"></a>
-        <div class="image">
-            <img src="image/Chowmein.jpg" alt="">
-        </div>
-        <div class="content">
-            <h3>delicious food</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-                <span> (50) </span>
-            </div>
-            <div class="price">$40.00 <span>$50.00</span></div>
-            <a href="#" class="btn">add to cart</a>
-        </div>
-    </div>
-
+        <?php } ?>
 </div>
 
 </section>
