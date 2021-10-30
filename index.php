@@ -60,7 +60,7 @@ function getCategory($id){
 	while($row=mysqli_fetch_assoc($res)){
 		?>
         <a href="#" class="box"  onclick="getCategory(<?php echo $row['id']?>)">
-        <img src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($row['category_image']); ?>" alt="Category Image">       
+        <img src="image/cat_img/<?php echo ($row['category_image']); ?>" alt="Category Image">       
         <h3><?php echo $row['category']?></h3>
         </a> 
 	<?php } ?>
@@ -88,7 +88,7 @@ function getCategory($id){
              <div class="box">
         <a href="#" class="fas fa-heart"></a>
         <div class="image">
-            <img src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($row['image']); ?>" alt="Dish Image">
+            <img src="image/dish_img/<?php echo ($row['image']); ?>" alt="Dish Image">
         </div>
         <div class="content">
             <h3><?php echo $row['dish']?><?php echo '('.$row['attribute'].')'?></h3>
