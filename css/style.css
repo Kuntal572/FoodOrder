@@ -160,10 +160,11 @@ section {
   height: calc(100vh - 8.5rem);
   background: #fff;
   z-index: 1000;
+  display: none;
 }
 
 .search-form-container.active {
- display: block;
+  display: block;
 }
 
 .search-form-container form {
@@ -176,8 +177,8 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  /* -webkit-animation: fadeUp .4s linear;
-          animation: fadeUp .4s linear; */
+  -webkit-animation: fadeUp .4s linear;
+          animation: fadeUp .4s linear;
 }
 
 .search-form-container form input {
@@ -208,7 +209,8 @@ section {
   height: calc(100vh - 8.5rem);
   background: #fff;
   overflow-y: scroll;
-  padding-bottom: 8rem;  
+  padding-bottom: 8rem;
+  display: none;
 }
 
 .shopping-cart-container.active {
@@ -328,6 +330,7 @@ section {
   color: #27ae60;
 }
 
+
 .login-form-container {
   position: fixed;
   top: 8.5rem;
@@ -337,7 +340,7 @@ section {
   height: calc(100vh - 8.5rem);
   background: #fff;
   padding: 0 2rem;
-  display: block;
+  display: none;
 }
 
 .login-form-container.active {

@@ -116,24 +116,7 @@ if($type=='forgot'){
 }
 ?>
 
-<!-- login-form  -->
-<div class="login-form-container">
 
-    <form action="">
-        <h3>login form</h3>
-        <input type="email" name="" placeholder="enter your email" id="" class="box">
-        <input type="password" name="" placeholder="enter your password" id="" class="box">
-        <div class="remember">
-            <input type="checkbox" name="" id="remember-me">
-            <label for="remember-me">remember me</label>
-        </div>
-        <a href=""  class="btn">login now</a>
-        <!-- <input type="submit" value="login now" class="btn"> -->
-        <p>forget password? <a href="#">click here</a></p>
-        <p>don't have an account? <a href="#">create one</a></p>
-    </form>
-
-</div>
 
 <!-- <div class="login-register-area pt-95 pb-100">
     <div class="container">

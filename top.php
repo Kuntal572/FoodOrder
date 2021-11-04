@@ -74,10 +74,10 @@ if(isset($_SESSION['FOOD_USER_ID'])){
 </nav>
 
 <div class="icons">
-    <a href=""><div id="menu-btn" class="fas fa-bars"></div></a>
-    <a href="search.php"><div id="search-btn" class="fas fa-search"></div></a>
-    <a href="cart.php"><div id="cart-btn" class="fas fa-shopping-cart"></div></a>
-    <a href="login_register.php"><div id="login-btn" class="fas fa-user"></div></a>
+   <div id="menu-btn" class="fas fa-bars"></div>
+   <div id="search-btn" class="fas fa-search"></div>
+    <div id="cart-btn" class="fas fa-shopping-cart"></div>
+    <div id="login-btn" class="fas fa-user"></div>
     
 </div>
 
