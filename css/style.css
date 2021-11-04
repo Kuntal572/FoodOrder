@@ -60,14 +60,15 @@ section {
   padding: .7rem 1.8rem;
   font-size: 1.7rem;
   cursor: pointer;
-  color: #fff;
+  color: #fff; 
   background: #27ae60;
   border-radius: .5rem;
   height: 45px;
 }
 
-.btn:hover {
+.btn:hover{
   background: #130f40;
+  color: #fff;
 }
 
 .header {
@@ -336,7 +337,7 @@ section {
   height: calc(100vh - 8.5rem);
   background: #fff;
   padding: 0 2rem;
-  display: none;
+  display: block;
 }
 
 .login-form-container.active {

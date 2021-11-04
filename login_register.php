@@ -4,7 +4,27 @@ if (isset($_GET['referral_code']) && $_GET['referral_code'] != '') {
     $_SESSION['FROM_REFERRAL_CODE'] = get_safe_value($_GET['referral_code']);
 }
 ?>
-<div class="login-register-area pt-95 pb-100">
+
+<!-- login-form  -->
+<div class="login-form-container">
+
+    <form action="">
+        <h3>login form</h3>
+        <input type="email" name="" placeholder="enter your email" id="" class="box">
+        <input type="password" name="" placeholder="enter your password" id="" class="box">
+        <div class="remember">
+            <input type="checkbox" name="" id="remember-me">
+            <label for="remember-me">remember me</label>
+        </div>
+        <a href=""  class="btn">login now</a>
+        <!-- <input type="submit" value="login now" class="btn"> -->
+        <p>forget password? <a href="#">click here</a></p>
+        <p>don't have an account? <a href="#">create one</a></p>
+    </form>
+
+</div>
+
+<!-- <div class="login-register-area pt-95 pb-100">
     <div class="container">
         <div class="row">
             <div class="col-lg-7 col-md-12 ml-auto mr-auto">
@@ -60,8 +80,5 @@ if (isset($_GET['referral_code']) && $_GET['referral_code'] != '') {
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
-<?php
-include("footer.php");
-?>

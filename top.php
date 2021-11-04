@@ -62,6 +62,7 @@ if(isset($_SESSION['FOOD_USER_ID'])){
 
     <!-- custom css file link  -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/style.scss"> -->
 </head>
 <body>
     <!-- header section starts  -->
