@@ -5,7 +5,7 @@ include('function.inc.php');
 include('constant.inc.php');
 $totalPrice=0;
 $getSetting=getSetting();
-
+$userid;
 $website_close=$getSetting['website_close'];
 $website_close_msg=$getSetting['website_close_msg'];
 $cart_min_price=$getSetting['cart_min_price'];
@@ -56,6 +56,8 @@ if(isset($_SESSION['FOOD_USER_ID'])){
         <link rel="stylesheet" href="assets/css/font-awesome.min.css">
         <link rel="stylesheet" href="assets/css/style.css">
         <link rel="stylesheet" href="assets/css/responsive.css">
+        <link rel="stylesheet" href="assets/css/app.css">
+        <link rel="stylesheet" href="assets/css/slick.css">
         <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
         <script src="/js/script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -71,7 +73,7 @@ if(isset($_SESSION['FOOD_USER_ID'])){
 <a href="#" class="logo"> <i class="fas fa-utensils"></i> food </a>
 
 <nav class="navbar">
-    <a href="#home">home</a>
+    <a href="index.php">home</a>
     <a href="#about">about</a>
     <a href="#popular">popular</a>
     <a href="#menu">menu</a>

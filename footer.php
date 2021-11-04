@@ -108,6 +108,8 @@
         <script src="<?php echo FRONT_SITE_PATH?>assets/js/owl.carousel.min.js"></script>
         <script src="<?php echo FRONT_SITE_PATH?>assets/js/plugins.js"></script>
         <script src="<?php echo FRONT_SITE_PATH?>assets/js/main.js"></script>
+        <script src="assets/js/app.js"></script>
+        <script src="assets/js/slick.min.js"></script>
 		<script>
 		var FRONT_SITE_PATH="<?php echo FRONT_SITE_PATH?>";
 		var SITE_DISH_IMAGE="<?php echo SITE_DISH_IMAGE?>";
