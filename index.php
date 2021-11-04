@@ -107,6 +107,44 @@ function getCategory($id){
 </section>
 
 <!-- category section ends -->
+
+<!-- about section starts  -->
+
+<section class="about" id="about">
+
+    <div class="image">
+        <img src="image/about-img.png" alt="">
+    </div>
+
+    <div class="content">
+        <span>why choose us?</span>
+        <h3 class="title">what's make our food delicious!</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ut explicabo, numquam iusto est a ipsum assumenda tempore esse corporis?</p>
+        <a href="#" class="btn">read more</a>
+        <div class="icons-container">
+            <div class="icons">
+                <img src="image/serv-1.png" alt="">
+                <h3>fast delivery</h3>
+            </div>  
+            <div class="icons">
+                <img src="image/serv-2.png" alt="">
+                <h3>fresh food</h3>
+            </div>   
+            <div class="icons">
+                <img src="image/serv-3.png" alt="">
+                <h3>best quality</h3>
+            </div>  
+            <div class="icons">
+                <img src="image/serv-4.png" alt="">
+                <h3>24/7 support</h3>
+            </div>           
+        </div>
+    </div>
+
+</section>
+
+<!-- about section ends -->
+
         <!-- popular section starts  -->
 
 <section class="popular" id="popular">

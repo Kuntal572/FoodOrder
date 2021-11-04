@@ -49,22 +49,13 @@ if(isset($_SESSION['FOOD_USER_ID'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo FRONT_SITE_NAME?></title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-        <link rel="stylesheet" href="assets/css/animate.css">
-        <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-        <link rel="stylesheet" href="assets/css/style.css">
-        <link rel="stylesheet" href="assets/css/responsive.css">
-        <link rel="stylesheet" href="assets/css/app.css">
-        <link rel="stylesheet" href="assets/css/slick.css">
-        <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
-        <script src="/js/script.js"></script>
+      
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <!-- custom css file link  -->
     <link rel="stylesheet" href="css/style.css">
-    <!-- <link rel="stylesheet" href="css/style.scss"> -->
+   
 </head>
 <body>
     <!-- header section starts  -->
