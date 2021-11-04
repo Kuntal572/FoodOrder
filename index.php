@@ -192,6 +192,7 @@ if(!empty($_GET["action"])) {
 
 </section>
 <!--Shoping-Cart Section End Here -->
+
 <!-- login-form  -->
 <div class="login-form-container">
 
@@ -203,13 +204,38 @@ if(!empty($_GET["action"])) {
             <input type="checkbox" name="" id="remember-me">
             <label for="remember-me">remember me</label>
         </div>
-        <a href=""  class="btn">login now</a>
-        <!-- <input type="submit" value="login now" class="btn"> -->
+        <!-- <a href=""  class="btn">login now</a> -->
+        <input type="submit" value="login now" class="btn">
         <p>forget password? <a href="#">click here</a></p>
-        <p>don't have an account? <a href="#">create one</a></p>
+        <p>don't have an account? <a href="#" id="register-btn">create one</a></p>
     </form>
 
 </div>
+<!-- login-form End-->
+
+<!-- Register-form  -->
+<div class="register-form-container">
+
+    <form action="">
+        <h3>register form</h3>
+        <input type="text" name="" placeholder="enter your name" id="" class="box">
+        <input type="phone" name="" placeholder="enter your phone" id="" class="box">
+        
+        <input type="email" name="" placeholder="enter your email" id="" class="box">
+       
+        <input type="password" name="" placeholder="enter your password" id="" class="box">
+        <input type="text" name="" placeholder="enter confirm password" id="" class="box">
+        <div class="remember">
+            <input type="checkbox" name="" id="terms-me">
+            <label for="terms-me">Agree <a href="#">Termas </a>& <a href="#">Conditions</a></label>
+        </div>
+        <!-- <a href=""  class="btn">login now</a> -->
+        <input type="submit" value="register now" class="btn">
+       <p>do you have an account? <a href="#" id="login-btn">login now</a></p>
+    </form>
+
+</div>
+<!-- Register-form End-->
 
 <!-- home section starts  -->
 
