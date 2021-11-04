@@ -227,7 +227,7 @@ if(!empty($_GET["action"])) {
         <input type="text" name="" placeholder="enter confirm password" id="" class="box">
         <div class="remember">
             <input type="checkbox" name="" id="terms-me">
-            <label for="terms-me">Agree <a href="#">Termas </a>& <a href="#">Conditions</a></label>
+            <label for="terms-me">Agree Terms & Conditions</label>
         </div>
         <!-- <a href=""  class="btn">login now</a> -->
         <input type="submit" value="register now" class="btn">
