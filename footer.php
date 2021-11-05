@@ -119,5 +119,6 @@
         
         <!-- custom js file link  -->
 <script src="js/script.js"></script>
+<script src="js/custom.js"></script>
     </body>
 </html>

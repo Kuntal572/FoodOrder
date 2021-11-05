@@ -77,9 +77,53 @@ if(isset($_SESSION['FOOD_USER_ID'])){
    <div id="menu-btn" class="fas fa-bars"></div>
    <div id="search-btn" class="fas fa-search"></div>
     <div id="cart-btn" class="fas fa-shopping-cart"></div>
-    <div id="login-btn" class="fas fa-user"></div>
+   <div id="login-btn" class="fas fa-user"></div>
 </div>
 
 </header>
 
 <!-- header section ends  -->
+<!-- login-form  -->
+<div class="login-form-container">
+
+    <form action="">
+        <h3>login form</h3>
+        <input type="email" name="user-name" placeholder="enter your email" id="" class="box">
+        <input type="password" name="user-password" placeholder="enter your password" id="" class="box">
+        <div class="remember">
+            <input type="checkbox" name="" id="remember-me">
+            <label for="remember-me">remember me</label>
+        </div>
+        <!-- <a href=""  class="btn">login now</a> -->
+        <input type="submit" value="login now" class="btn">
+        <p>forget password? <a href="#">click here</a></p>
+        <p>don't have an account? <a href="#" id="register-btn">create one</a></p>
+    </form>
+
+</div>
+<!-- login-form End-->
+
+<!-- Register-form  -->
+<div class="register-form-container">
+
+    <form method="post" id="frmRegister">
+        <h3>register form</h3>
+        <input type="text" name="name" placeholder="enter your name" id="name" class="box" required>
+        <input type="email" name="email" placeholder="enter your email" id="email" class="box" required>
+        <span id="email_error" class="error_field"></span>
+        <input type="text" name="mobile" placeholder="enter your mobile" id="mobile" class="box" required>
+        <input type="password" name="password" placeholder="enter your password" id="password" class="box" required>
+        <input type="text" name="" placeholder="enter confirm password" id="" class="box">
+        <div class="remember">
+            <input type="checkbox" name="" id="terms-me">
+            <label for="terms-me">Agree Terms & Conditions</label>
+        </div>
+        <!-- <a href=""  class="btn">login now</a> -->
+        <input type="submit" value="register now" class="btn" id="register_submit">
+       <p>do you have an account? <a href="#" id="login-btn">login now</a></p>
+       <input type="hidden" name="type" value="register"/>
+       <div id="form_msg" class="error_field"></div>
+    </form>
+
+</div>
+<!-- Register-form End-->
