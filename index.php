@@ -297,10 +297,11 @@ function getCategory($id){
              <div class="box">
         <a href="#" class="fas fa-heart"></a>
         <div class="image">
-            <img src="image/dish_img/<?php echo ($row['img']); ?>" alt="Image">
+            <img src="image/resturant_logo/<?php echo ($row['logo']); ?>" alt="Image">
         </div>
         <div class="content">
-            <h3><?php echo $row['name']?><?php echo '('.$row['address'].')'?></h3>
+            <h3><?php echo $row['name']?></h3>
+            <p style="font-size: 15px;"><?php echo $row['address'] ?></p>
             <div class="stars">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
@@ -309,7 +310,7 @@ function getCategory($id){
                 <i class="fas fa-star-half-alt"></i>
                 <span> (50) </span>
             </div>
-            <div class="price">PH: <?php echo $row['phone']?></div>
+            <div class="price">Ph: <?php echo $row['phone']?></div>
             <a href='all_dish.php?id=<?php echo $row['r_id'] ?>' class="btn">View all Dish</a>
         </div>
     </div>

@@ -16,7 +16,7 @@ while($row=mysqli_fetch_assoc($res)){
 <section class="about" id="about">
 
     <div class="image">
-        <img src="image/about-img.png" alt="">
+        <img src="image/resturant_img/<?php echo ($row['img']); ?>" alt="">
     </div>
 
     <div class="content">
