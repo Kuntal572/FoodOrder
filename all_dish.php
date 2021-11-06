@@ -13,7 +13,7 @@ include "top.php";
     $res_id=$_GET['id'];
     
 	//$sql="SELECT dish.id,dish.category_id,dish.dish,dish.image,dish.type,dish_details.attribute,dish_details.price FROM dish,dish_details where dish.id=dish_details.dish_id AND dish.status=1 and dish_details.status=1 ORDER BY dish.added_on DESC LIMIT 8";
-    $sql='SELECT * FROM dish,dish_details where dish.r_id =dish_details.r_id and dish.r_id='.$res_id;
+    $sql = "SELECT dish.*,dish_details.attribute,dish_details.price FROM dish_details,dish where dish.id=dish_details.dish_id and dish.r_id=8 and dish.status=1 and dish_details.status=1 ORDER BY added_on DESC";
 	$res=mysqli_query($con,$sql);
 	
 	while($row=mysqli_fetch_assoc($res)){
