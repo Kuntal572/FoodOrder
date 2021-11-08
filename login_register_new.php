@@ -2,7 +2,7 @@
 include('database.inc.php');
 include('function.inc.php');
 include('constant.inc.php');
-
+include('smtp/PHPMailerAutoload.php');
 $name=get_safe_value($_POST['name']);
 	$email=get_safe_value($_POST['email']);
 	$mobile=get_safe_value($_POST['mobile']);
@@ -15,7 +15,12 @@ $name=get_safe_value($_POST['name']);
             $arr=array('status'=>'error','msg'=>'Email id already registered','field'=>'email_error');
             
         }else{
-            mysqli_query($con,"insert into user(name,email,mobile,password,status,email_verify,added_on) values('$name','$email','$mobile','$password','0','0','$added_on')");
+            $rand_str=rand_str();
+            mysqli_query($con,"insert into user(name,email,mobile,password,status,email_verify,added_on,rand_str) values('$name','$email','$mobile','$password','0','0','$added_on','$rand_str')");
+            $id=mysqli_insert_id($con);
+            $html=FRONT_SITE_PATH."verify.php?id=".$rand_str;
+            send_email($email,$html,'Verify your email id');
+
             $arr=array('status'=>'success','msg'=>'Thank you for register. Please 
             check your email id, to verify your account','field'=>'form_msg');
         }

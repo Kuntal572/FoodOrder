@@ -42,9 +42,9 @@ function send_email($email,$html,$subject){
 	$mail->Port=587;
 	$mail->SMTPSecure="tls";
 	$mail->SMTPAuth=true;
-	$mail->Username="EMAIL";
-	$mail->Password="PASSWORD";
-	$mail->setFrom("EMAIL");
+	$mail->Username="sellertamal@gmail.com";
+	$mail->Password="Tamal@711302";
+	$mail->setFrom("sellertamal@gmail.com");
 	$mail->addAddress($email);
 	$mail->IsHTML(true);
 	$mail->Subject=$subject;

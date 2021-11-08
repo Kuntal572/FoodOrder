@@ -1,12 +1,12 @@
 <?php
-include ("header.php");
+include ("top.php");
 
 $msg="";
 //Email id verify
 if(isset($_GET['id']) && $_GET['id']!=''){
 	$id=get_safe_value($_GET['id']);
 	mysqli_query($con,"update user set email_verify=1 where rand_str='$id'");
-	$msg="Email id verify";
+	$msg="Woohoo! Congratulations Your Email Successfully Veryfied";
 	
 	
 	/*$res=mysqli_query($con,"select from_referral_code,email from user where rand_str='$id'");
@@ -22,15 +22,32 @@ if(isset($_GET['id']) && $_GET['id']!=''){
 	
 	
 }else{
-	redirect(FRONT_SITE_PATH);
+	redirect('index.php');
 }
 ?>
 
-<div class="breadcrumb-area gray-bg">
+<section class="about" id="about">
+
+<!-- <div class="image">
+    <img src="image/about-img.png" alt="">
+</div> -->
+
+<div class="content">
+    <span>Email Id Verify</span>
+    <h3 class="title"><?php
+        echo $msg;?></h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ut explicabo, numquam iusto est a ipsum assumenda tempore esse corporis?</p>
+    
+  
+</div>
+
+</section>
+
+<!-- <div class="breadcrumb-area gray-bg">
             <div class="container">
                 <div class="breadcrumb-content">
                     <ul>
-                        <li><a href="<?php echo FRONT_SITE_PATH?>shop">Home</a></li>
+                        <li><a href="<?php echo FRONT_SITE_PATH?>shop">Home</a></li> 
                         <li class="active"> Email Verify </li>
                     </ul>
                 </div>
@@ -52,7 +69,7 @@ if(isset($_GET['id']) && $_GET['id']!=''){
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
 <?php
 include("footer.php");
