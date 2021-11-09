@@ -65,15 +65,28 @@ if(isset($_SESSION['FOOD_USER_ID'])){
 
 <header class="header">
 
-<a href="index.php" class="logo"> <i class="fas fa-utensils"></i> food </a>
+<a href="index.php" class="logo"> <i class="fas fa-utensils"></i> food</a>
 
 <nav class="navbar">
-    <a href="#home">home</a>
-    <a href="#about">about</a>
-    <a href="#popular">popular</a>
-    <a href="#menu">menu</a>
-    <a href="#order">order</a>
-    <a href="#blogs">blogs</a>
+   <ul>
+        <!-- <li><a>Welcome</a></li> -->
+       <li><a>Hello Tamal kumar Chakraborty | </a></li>
+       <li><a href="#home">home</a></li>
+    <li><a href="#about">about</a></li> 
+    <li><a href="#popular">popular</a></li>
+    <li><a href="#menu">menu</a></li>
+   <li><a href="#order">order</a></li>
+    <li><a href="#blogs">blogs</a></li>
+    <li><a href="#blogs">setting ></a>
+     <ul>
+<li><a href="">Wishlist </a></li>
+<li><a href="">Login</a></li>
+<li><a href="">Register</a></li>
+<li><a href="">my account</a></li>
+    </ul>
+</li>
+
+    </ul>
 </nav>
 
 <div class="icons">
@@ -86,21 +99,27 @@ if(isset($_SESSION['FOOD_USER_ID'])){
 </header>
 
 <!-- header section ends  -->
+
+
 <!-- login-form  -->
 <div class="login-form-container">
 
-    <form action="">
+    <form method="post" id="frmLogin">
         <h3>login form</h3>
-        <input type="email" name="user-name" placeholder="enter your email" id="" class="box">
-        <input type="password" name="user-password" placeholder="enter your password" id="" class="box">
+        <input type="email" name="user_email" placeholder="enter your email" id="" class="box" required>
+        <input type="password" name="user_password" placeholder="enter your password" id="" class="box" required>
         <div class="remember">
             <input type="checkbox" name="" id="remember-me">
             <label for="remember-me">remember me</label>
         </div>
         <!-- <a href=""  class="btn">login now</a> -->
-        <input type="submit" value="login now" class="btn">
+        <input type="submit" value="login now" class="btn" id="login_submit">
+      
         <p>forget password? <a href="#">click here</a></p>
         <p>don't have an account? <a href="#" id="register-btn">create one</a></p>
+        <input type="hidden" name="type" value="login"/>
+        <div id="form_login_msg" class="error_field"></div>
+      
     </form>
 
 </div>
@@ -116,7 +135,7 @@ if(isset($_SESSION['FOOD_USER_ID'])){
         <span id="email_error" class="error_field"></span>
         <input type="text" name="mobile" placeholder="enter your mobile" id="mobile" class="box" required>
         <input type="password" name="password" placeholder="enter your password" id="password" class="box" required>
-        <input type="text" name="" placeholder="enter confirm password" id="" class="box">
+        
         <div class="remember">
             <input type="checkbox" name="" id="terms-me">
             <label for="terms-me">Agree Terms & Conditions</label>

@@ -20,13 +20,14 @@ document.querySelector('#cart-btn').onclick = () =>{
 
 let loginForm = document.querySelector('.login-form-container');
 
-document.querySelector('#login-btn').onclick = () =>{
+document.querySelector('#login-btn').onclick = () =>{  
     loginForm.classList.toggle('active');
-    registerForm.classList.remove('active');
     searchForm.classList.remove('active');
     cart.classList.remove('active');    
     navbar.classList.remove('active');
+    registerForm.classList.remove('active');
 }
+
 
 let registerForm = document.querySelector('.register-form-container');
 

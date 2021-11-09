@@ -110,14 +110,41 @@ section {
   color: #27ae60;
 }
 
-.header .navbar a {
+.header .navbar ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .navbar ul li{
+  list-style: none;
+}
+
+.header .navbar ul li a {
   font-size: 1.7rem;
   margin: 0 1rem;
   color: #666;
 }
-
-.header .navbar a:hover {
+.header .navbar ul li:first-child a{
   color: #27ae60;
+}
+.header .navbar ul li a:hover {
+  color: #27ae60;
+}
+
+.header .navbar ul ul{
+  background: #fff;
+  position: absolute;
+  -webkit-box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.05);
+          box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.05);
+  display: none;
+}
+
+.header .navbar ul ul li{
+ margin:1rem 0;
+}
+
+.header .navbar ul li:hover > ul{
+  display: block;
 }
 
 .header .icons div {
@@ -136,6 +163,7 @@ section {
 .header .icons div:hover {
   color: #fff;
   background: #27ae60;
+  
 }
 
 #menu-btn {
@@ -1177,7 +1205,7 @@ section {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   #menu-btn {
     display: inline-block;
   }
@@ -1196,12 +1224,18 @@ section {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
             clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
   }
-  .header .navbar a {
-    font-size: 2rem;
-    margin: 2rem;
+  .header .navbar ul{
     display: block;
   }
-  .home .home-parallax-img {
+  .header .navbar ul li a {
+    font-size: 2rem;
+    margin: 2rem; 
+    display: block;
+  }
+  .header .navbar ul ul {
+    position: relative;
+  }
+   .home .home-parallax-img {
     top: 0;
     right: 0;
     width: 130%;
