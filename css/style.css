@@ -1228,7 +1228,7 @@ section {
     display: block;
   }
   .header .navbar ul li a {
-    font-size: 2rem;
+    font-size: 1.6rem;
     margin: 2rem; 
     display: block;
   }
@@ -1244,6 +1244,8 @@ section {
     width: 100%;
   }
 }
+
+
 
 @media (max-width: 450px) {
   html {
@@ -1261,5 +1263,6 @@ section {
   .home .content p {
     font-size: 1.5rem;
   }
+ 
 }
 /*# sourceMappingURL=style.css.map */

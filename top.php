@@ -69,8 +69,13 @@ if(isset($_SESSION['FOOD_USER_ID'])){
 
 <nav class="navbar">
    <ul>
-        <!-- <li><a>Welcome</a></li> -->
-       <li><a>Hello Tamal kumar Chakraborty | </a></li>
+        
+        <?php
+    if(isset($_SESSION['FOOD_USER_NAME'])){
+        ?>
+       <li><a><?php echo "Welcome ".$_SESSION['FOOD_USER_NAME'];?></a></li>
+        <?php } ?>
+
        <li><a href="#home">home</a></li>
     <li><a href="#about">about</a></li> 
     <li><a href="#popular">popular</a></li>
@@ -79,10 +84,9 @@ if(isset($_SESSION['FOOD_USER_ID'])){
     <li><a href="#blogs">blogs</a></li>
     <li><a href="#blogs">setting ></a>
      <ul>
-<li><a href="">Wishlist </a></li>
-<li><a href="">Login</a></li>
-<li><a href="">Register</a></li>
-<li><a href="">my account</a></li>
+<li><a href="">Profile</a></li>
+<li><a href="">Order History</a></li>
+<li><a href="logout.php">Logout</a></li>
     </ul>
 </li>
 
@@ -93,7 +97,13 @@ if(isset($_SESSION['FOOD_USER_ID'])){
    <div id="menu-btn" class="fas fa-bars"></div>
    <div id="search-btn" class="fas fa-search"></div>
     <div id="cart-btn" class="fas fa-shopping-cart"></div>
-   <div id="login-btn" class="fas fa-user"></div>
+    <?php
+    if(!isset($_SESSION['FOOD_USER_NAME'])){
+        ?>
+        <div id="login-btn" class="fas fa-user"></div>
+        <?php
+    }
+    ?>
 </div>
 
 </header>
