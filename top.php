@@ -125,7 +125,7 @@ if(isset($_SESSION['FOOD_USER_ID'])){
         <!-- <a href=""  class="btn">login now</a> -->
         <input type="submit" value="login now" class="btn" id="login_submit">
       
-        <p>forget password? <a href="#">click here</a></p>
+        <p>forget password? <a href="#" id="forgot-btn">click here</a></p>
         <p>don't have an account? <a href="#" id="register-btn">create one</a></p>
         <input type="hidden" name="type" value="login"/>
         <div id="form_login_msg" class="error_field"></div>
@@ -152,10 +152,27 @@ if(isset($_SESSION['FOOD_USER_ID'])){
         </div>
         <!-- <a href=""  class="btn">login now</a> -->
         <input type="submit" value="register now" class="btn" id="register_submit">
-       <p>do you have an account? <a href="#" id="login-btn">login now</a></p>
+       <p>do you have an account? <a href="#" id="login-btn2">login now</a></p>
        <input type="hidden" name="type" value="register"/>
        <div id="form_msg" class="error_field"></div>
     </form>
 
 </div>
 <!-- Register-form End-->
+
+<!-- login-form  -->
+<div class="forgot-form-container">
+
+    <form method="post" id="frmForgotPassword">
+        <h3>Forgot Password</h3>
+        <input type="email" name="user_email" placeholder="enter your email" id="" class="box" required>
+        <input type="submit" value="submit" class="btn" id="forgot_submit">
+        <p>do you have an account? <a href="#" id="login-btn3">login now</a></p>
+       
+        <input type="hidden" name="type" value="forgot"/>
+        <div id="form_forgot_msg" class="error_field"></div>
+      
+    </form>
+
+</div>
+<!-- login-form End-->

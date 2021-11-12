@@ -47,3 +47,27 @@ jQuery('#frmLogin').on('submit',function(e){
     });
    e.preventDefault(); 
 });
+
+//Forgot Code
+jQuery('#frmForgotPassword').on('submit',function(e){
+    jQuery('#forgot_submit').attr('disabled',true);
+    jQuery('#form_forgot_msg').html('Please wait...');
+    jQuery.ajax({
+        url:'login_register_new.php',
+        type:'post',
+        data:jQuery('#frmForgotPassword').serialize(),
+        success:function(result) {
+            jQuery('#form_forgot_msg').html('');
+            jQuery('#forgot_submit').attr('disabled',false);
+            var data=jQuery.parseJSON(result);
+            if(data.status=='error'){
+                jQuery('#form_forgot_msg').html(data.msg);
+            }
+            if(data.status=='success'){
+               jQuery('#form_forgot_msg').html(data.msg);
+               // window.location.href='index.php';
+            }
+        }
+    });
+   e.preventDefault(); 
+});
