@@ -23,7 +23,7 @@ include('smtp/PHPMailerAutoload.php');
             $rand_str=rand_str();
             mysqli_query($con,"insert into user(name,email,mobile,password,status,email_verify,added_on,rand_str) values('$name','$email','$mobile','$new_password','1','0','$added_on','$rand_str')");
             $id=mysqli_insert_id($con);
-            $html=FRONT_SITE_PATH."verify.php?id=".$rand_str;
+            $html=FRONT_SITE_PATH."verify/".$rand_str;
             send_email($email,$html,'Verify your email id');
 
             $arr=array('status'=>'success','msg'=>'Thank you for register. Please 

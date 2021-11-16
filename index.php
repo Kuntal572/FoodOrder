@@ -311,7 +311,7 @@ function getCategory($id){
                 <span> (50) </span>
             </div>
             <div class="price">Ph: <?php echo $row['phone']?></div>
-            <a href='all_dish.php?id=<?php echo $row['r_id'] ?>' class="btn">View all Dish</a>
+            <a href="<?php echo FRONT_SITE_PATH?>all_dish?id=<?php echo $row['r_id'] ?>" class="btn">View all Dish</a>
         </div>
     </div>
         <?php } ?>
@@ -320,13 +320,13 @@ function getCategory($id){
 </section>
 
 <!-- popular section ends -->
-        <script src="assets/js/vendor/jquery-1.12.0.min.js"></script>
-        <script src="assets/js/bootstrap.min.js"></script>
-        <script src="assets/js/imagesloaded.pkgd.min.js"></script>
-        <script src="assets/js/isotope.pkgd.min.js"></script>
-        <script src="assets/js/owl.carousel.min.js"></script>
-        <script src="assets/js/plugins.js"></script>
-        <script src="assets/js/main.js"></script> 
+        <script src="<?php echo FRONT_SITE_PATH?>assets/js/vendor/jquery-1.12.0.min.js"></script>
+        <script src="<?php echo FRONT_SITE_PATH?>assets/js/bootstrap.min.js"></script>
+        <script src="<?php echo FRONT_SITE_PATH?>assets/js/imagesloaded.pkgd.min.js"></script>
+        <script src="<?php echo FRONT_SITE_PATH?>assets/js/isotope.pkgd.min.js"></script>
+        <script src="<?php echo FRONT_SITE_PATH?>assets/js/owl.carousel.min.js"></script>
+        <script src="<?php echo FRONT_SITE_PATH?>assets/js/plugins.js"></script>
+        <script src="<?php echo FRONT_SITE_PATH?>assets/js/main.js"></script> 
 <?php 
 include('footer.php');
 ?>

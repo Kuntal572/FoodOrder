@@ -118,7 +118,10 @@
 		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> -->
         
         <!-- custom js file link  -->
-<script src="js/script.js"></script>
-<script src="js/custom.js"></script>
+        <script>
+            var FRONT_SITE_PATH="<?php echo FRONT_SITE_PATH?>";
+        </script>
+<script src="<?php echo FRONT_SITE_PATH?>js/script.js"></script>
+<script src="<?php echo FRONT_SITE_PATH?>js/custom.js"></script>
     </body>
 </html>

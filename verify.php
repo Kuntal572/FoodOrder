@@ -22,7 +22,7 @@ if(isset($_GET['id']) && $_GET['id']!=''){
 	
 	
 }else{
-	redirect('index.php');
+	redirect(FRONT_SITE_PATH);
 }
 ?>
 

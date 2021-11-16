@@ -57,7 +57,7 @@ if(isset($_SESSION['FOOD_USER_ID'])){
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <!-- custom css file link  -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="<?php echo FRONT_SITE_PATH?>css/style.css">
    
 </head>
 <body>
@@ -65,7 +65,7 @@ if(isset($_SESSION['FOOD_USER_ID'])){
 
 <header class="header">
 
-<a href="index.php" class="logo"> <i class="fas fa-utensils"></i> food</a>
+<a href="<?php echo FRONT_SITE_PATH?>index" class="logo"> <i class="fas fa-utensils"></i> food</a>
 
 <nav class="navbar">
    <ul>
@@ -86,7 +86,7 @@ if(isset($_SESSION['FOOD_USER_ID'])){
      <ul>
 <li><a href="">Profile</a></li>
 <li><a href="">Order History</a></li>
-<li><a href="logout.php">Logout</a></li>
+<li><a href="<?php echo FRONT_SITE_PATH?>logout">Logout</a></li>
     </ul>
 </li>
 
