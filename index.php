@@ -91,11 +91,7 @@ if(!empty($_GET["action"])) {
 <!-- home section ends  -->
 
 <!-- category section starts  -->
-<?php 
-function getCategory($id){
-    echo $id;
-}
-?>
+
 <section class="category">
     <?php 
     global $con;
@@ -104,7 +100,7 @@ function getCategory($id){
 	
 	while($row=mysqli_fetch_assoc($res)){
 		?>
-        <a href="#" class="box"  onclick="getCategory(<?php echo $row['id']?>)">
+        <a href="<?php echo FRONT_SITE_PATH?>dish_show?id=<?php echo $row['id'] ?>" class="box">
         <img src="image/cat_img/<?php echo ($row['category_image']); ?>" alt="Category Image">       
         <h3><?php echo $row['category']?></h3>
         </a> 

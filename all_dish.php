@@ -87,7 +87,7 @@ while($row=mysqli_fetch_assoc($res)){
                 </div>
                 <div class="price">₹<?php echo $row['price'] ?><span>$50.00</span></div>
 
-                <a class="btn" onclick="add_to_cart()">add to cart</a>
+                <a class="btn" onclick="add_to_cart(<?php echo $row['id'] ?>)">add to cart</a>
             </div>
         </div>
         <?php } ?>
@@ -96,8 +96,8 @@ while($row=mysqli_fetch_assoc($res)){
 </section>
 
 <script>
-    function add_to_cart(){
-        alert('s');
+    function add_to_cart(id){
+        alert(id);
     }
 </script>
 

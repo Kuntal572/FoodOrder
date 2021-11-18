@@ -2,7 +2,7 @@
 define('SITE_NAME','Food Ordering Admin');
 define('FRONT_SITE_NAME','Food Ordering');
 
-define('FRONT_SITE_PATH','http://127.0.0.1/foodmangemore/FoodOrder/');
+define('FRONT_SITE_PATH','http://127.0.0.1/FoodOrder/');
 define('SERVER_IMAGE',$_SERVER['DOCUMENT_ROOT']."/php/food_ordering/");
 
 define('SERVER_DISH_IMAGE',SERVER_IMAGE."media/dish/");
