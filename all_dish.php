@@ -86,13 +86,21 @@ while($row=mysqli_fetch_assoc($res)){
                     <span> (50) </span>
                 </div>
                 <div class="price">₹<?php echo $row['price'] ?><span>$50.00</span></div>
-                <a href="#" class="btn">add to cart</a>
+
+                <a class="btn" onclick="add_to_cart()">add to cart</a>
             </div>
         </div>
         <?php } ?>
     </div>
 
 </section>
+
+<script>
+    function add_to_cart(){
+        alert('s');
+    }
+</script>
+
 <!-- popular section ends -->
 <?php
 include "footer.php";

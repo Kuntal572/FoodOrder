@@ -123,5 +123,13 @@
         </script>
 <script src="<?php echo FRONT_SITE_PATH?>js/script.js"></script>
 <script src="<?php echo FRONT_SITE_PATH?>js/custom.js"></script>
+<script src="<?php echo FRONT_SITE_PATH?>assets/js/vendor/jquery-1.12.0.min.js"></script>
+        <script src="<?php echo FRONT_SITE_PATH?>assets/js/bootstrap.min.js"></script>
+        <script src="<?php echo FRONT_SITE_PATH?>assets/js/imagesloaded.pkgd.min.js"></script>
+        <script src="<?php echo FRONT_SITE_PATH?>assets/js/isotope.pkgd.min.js"></script>
+        <script src="<?php echo FRONT_SITE_PATH?>assets/js/owl.carousel.min.js"></script>
+        <script src="<?php echo FRONT_SITE_PATH?>assets/js/plugins.js"></script>
+        <script src="<?php echo FRONT_SITE_PATH?>assets/js/main.js"></script> 
+
     </body>
 </html>
